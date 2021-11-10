@@ -1,0 +1,31 @@
+.Description {
+    width: 50%;
+    padding-top: 105px;
+    padding-left: 40px;
+}
+
+.film-card-title {
+    font-size: 30px;
+}
+
+.Stars {
+    margin-top: 20px;
+    display: flex;
+}
+
+.Star {
+    width: 25px;
+}
+
+.controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    text-transform: uppercase;
+    width: 48%;
+    padding: 5px;
+}
+

@@ -1,0 +1,8 @@
+.Interaction {
+    align-self: start;
+    display: flex;
+}
+
+.icon {
+    font-size: 40px;
+}
