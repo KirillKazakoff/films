@@ -1,6 +1,6 @@
-/* eslint-disable object-curly-newline */
+/** @format */
 
-import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 import React from 'react';
 import './FilmCard.css';
 
@@ -8,29 +8,28 @@ import Description from './Description/Description';
 import Poster from './Poster/Poster';
 import Interaction from './Interaction/Interaction';
 
-const FilmCard = (card) => {
-    const { genre, src, price, title, starsCount } = card;
+export default function FilmCard({ card }) {
+    const {
+        genre, src, price, title, starsCount,
+    } = card;
 
     return (
-        <li
-            className='FilmCard'
-            key={nanoid()}
-        >
-            <Poster
-                genre={genre}
-                img={src}
-                title={title}
-            />
+        <li className='FilmCard'>
+            <Poster genre={genre} img={src} title={title} />
 
-            <Description
-                starsCount={starsCount}
-                title={title}
-                price={price}
-            />
+            <Description starsCount={starsCount} title={title} price={price} />
 
             <Interaction />
         </li>
     );
-};
+}
 
-export default FilmCard;
+FilmCard.propTypes = {
+    card: PropTypes.shape({
+        genre: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        starsCount: PropTypes.number,
+        src: PropTypes.string,
+    }).isRequired,
+};

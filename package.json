@@ -4,8 +4,9 @@
     "main": "index.js",
     "license": "ISC",
     "scripts": {
+        "debug": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --remote-debugging-port=9222 --user-data-dir=remote-debug-profile http://localhost:9000/dist/",
         "test": "jest --passWithNoTests",
-        "start": "webpack serve --config webpack.dev.js",
+        "start": "yarn debug & webpack serve --config webpack.dev.js",
         "webpack": "webpack --mode production --config webpack.prod.js",
         "build": "yarn run webpack",
         "lint": "eslint ."
@@ -52,6 +53,7 @@
         "luxon": "^2.0.2",
         "nanoid": "^3.1.29",
         "path-browserify": "^1.0.1",
+        "prop-types": "^15.7.2",
         "purgecss-webpack-plugin": "^4.0.3",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"

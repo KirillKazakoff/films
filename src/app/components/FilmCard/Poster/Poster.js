@@ -1,9 +1,10 @@
+/** @format */
+
+import PropTypes from 'prop-types';
 import React from 'react';
 import './Poster.css';
 
 export default function Poster({ genre, img, title }) {
-    // const subtitleCls = 'card-subtitle;
-
     return (
         <div className='Poster'>
             <h2 className='poster-genre'>{genre}</h2>
@@ -11,3 +12,9 @@ export default function Poster({ genre, img, title }) {
         </div>
     );
 }
+
+Poster.propTypes = {
+    genre: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+};

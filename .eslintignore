@@ -1,3 +1,5 @@
 dist/
 webpack*
 # src
+node_modules
+remote-debug-profile
